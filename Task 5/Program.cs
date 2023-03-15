@@ -11,13 +11,13 @@ namespace ThreeWeeksInParadise
     {
         static void Main(string[] args)
         {
-            string temp;
+            string tempOfSwapStrings;
             string firstName = "Витко";
             string lastName = "Алексей";
             Console.WriteLine(firstName + " " + lastName);
-            temp = firstName;
+            tempOfSwapStrings = firstName;
             firstName = lastName;
-            lastName = temp;
+            lastName = tempOfSwapStrings;
             Console.WriteLine(firstName + " " + lastName);
         }
     }
