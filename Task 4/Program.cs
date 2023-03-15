@@ -10,6 +10,7 @@ namespace ThreeWeeksInParadise
     {
         static void Main(string[] args)
         {
+            int dividor = 10;
             string name;
             int age;
             string ageWord;
@@ -23,7 +24,7 @@ namespace ThreeWeeksInParadise
             zodiacSign = Console.ReadLine();
             Console.Write("Введите ваше место работы: ");
             placeOfWork = Console.ReadLine();
-            int lastNumberInAge = age % 10;
+            int lastNumberInAge = age % dividor;
             if (lastNumberInAge == 1)
             {
                 ageWord = "год";
