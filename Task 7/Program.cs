@@ -13,39 +13,38 @@ namespace ThreeWeeksInParadise
         static void Main(string[] args)
         {
             int gold;
-            int crystal;
+            int crystals;
             int crystalPrice;
             int totalPrice;
             int minCrystalPrice = 1;
-            int maxCrystalPrice;
-
             Console.Write("Сколько у вас золота? - ");
             gold = Convert.ToInt32(Console.ReadLine());
-            maxCrystalPrice = gold + 1;
-            crystalPrice = new Random().Next(minCrystalPrice, maxCrystalPrice);
+            crystalPrice = new Random().Next(minCrystalPrice, gold + 1);
             Console.Clear();
             Console.WriteLine("Магазин кристаллов");
             Console.WriteLine("");
             Console.WriteLine($"Цена за кристалл: {crystalPrice}.    У Вас {gold} золота.");
             Console.Write("Сколько желаете приобрести? - ");
-            crystal = Convert.ToInt32(Console.ReadLine());
-            totalPrice = crystal * crystalPrice;
+            crystals = Convert.ToInt32(Console.ReadLine());
+            totalPrice = crystals * crystalPrice;
+
             if (totalPrice <= gold)
             {
                 Console.WriteLine("Спасибо за покупку!");
-                gold -= crystal * crystalPrice;
+                gold -= crystals * crystalPrice;
             }
             else
             {
                 Console.WriteLine("У Вас не достаточно средств!");
             }
+
             Console.WriteLine();
             Console.WriteLine("Нажмите любую клавишу для продолжения...");
             Console.ReadKey();
             Console.Clear();
             Console.WriteLine("Инвентарь");
             Console.WriteLine($"Золото:    {gold}.");
-            Console.WriteLine($"Кристаллы: {crystal}.");
+            Console.WriteLine($"Кристаллы: {crystals}.");
             Console.ReadKey();
         }
     }
