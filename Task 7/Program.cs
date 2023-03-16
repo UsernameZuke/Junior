@@ -13,7 +13,8 @@ namespace ThreeWeeksInParadise
         static void Main(string[] args)
         {
             int gold;
-            int crystals;
+            int crystals = 0;
+            int cristalsToBuy;
             int crystalPrice;
             int totalPrice;
             int minCrystalPrice = 1;
@@ -25,13 +26,14 @@ namespace ThreeWeeksInParadise
             Console.WriteLine("");
             Console.WriteLine($"Цена за кристалл: {crystalPrice}.    У Вас {gold} золота.");
             Console.Write("Сколько желаете приобрести? - ");
-            crystals = Convert.ToInt32(Console.ReadLine());
-            totalPrice = crystals * crystalPrice;
+            cristalsToBuy = Convert.ToInt32(Console.ReadLine());
+            totalPrice = cristalsToBuy * crystalPrice;
 
             if (totalPrice <= gold)
             {
                 Console.WriteLine("Спасибо за покупку!");
-                gold -= crystals * crystalPrice;
+                gold -= cristalsToBuy * crystalPrice;
+                crystals = cristalsToBuy;
             }
             else
             {
