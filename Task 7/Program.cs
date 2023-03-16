@@ -33,7 +33,7 @@ namespace ThreeWeeksInParadise
             {
                 Console.WriteLine("Спасибо за покупку!");
                 gold -= cristalsToBuy * crystalPrice;
-                crystals = cristalsToBuy;
+                crystals += cristalsToBuy;
             }
             else
             {
