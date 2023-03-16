@@ -32,7 +32,7 @@ namespace ThreeWeeksInParadise
             if (totalPrice <= gold)
             {
                 Console.WriteLine("Спасибо за покупку!");
-                gold -= cristalsToBuy * crystalPrice;
+                gold -= totalPrice;
                 crystals += cristalsToBuy;
             }
             else
