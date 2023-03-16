@@ -13,8 +13,10 @@ namespace ThreeWeeksInParadise
         {
             int picturesInRow = 3;
             int allPictures = 52;
-            Console.WriteLine("Получится полных рядов картинок:    " + allPictures / picturesInRow);
-            Console.WriteLine("Останется картинок в неполном ряду: " + allPictures % picturesInRow);
+            int numberOfRows = allPictures / picturesInRow;
+            int restOfPictures = allPictures % picturesInRow;
+            Console.WriteLine("Получится полных рядов картинок:    " + numberOfRows);
+            Console.WriteLine("Останется картинок в неполном ряду: " + restOfPictures);
             Console.ReadKey();
         }
     }
